@@ -1,0 +1,19 @@
+{% extends 'home/pages/base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+
+{% block body %}
+{% include 'home/components/navbar.html' %}
+<div class="contaier-fluid">
+{% include 'home/components/slider.html' %}
+
+
+{% include 'home/components/small-grid.html' %}
+
+{% include 'home/components/inquire.html' %}
+
+
+{% include 'home/components/footer.html' %}
+</div>
+{% endblock body %}

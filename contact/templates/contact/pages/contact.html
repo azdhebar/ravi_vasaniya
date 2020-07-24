@@ -1,0 +1,12 @@
+{% extends 'home/pages/base.html' %}
+
+{% block title %}
+Contact
+{% endblock title %}
+{% block body %}
+{%load static%}
+
+{% include 'home/components/navbar.html' %}
+{% include 'contact/components/form.html' %}
+{%include 'home/components/footer.html'%}
+{% endblock body %}
