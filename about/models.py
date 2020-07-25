@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class about(models.Model):
+    profile = models.ImageField(verbose_name="Profile Image")
     name= models.CharField(max_length=100,verbose_name="Name")
     tag_line = models.CharField(max_length=200,verbose_name="TagLine")
     title1 = models.CharField(max_length=100,verbose_name="Title Of First Block")
@@ -13,10 +14,9 @@ class about(models.Model):
 
     def  __str__(self):
         return self.name
-    
+
     class Meta:
         ordering=["-created_at"]
 
-    
-    
-    
+
+

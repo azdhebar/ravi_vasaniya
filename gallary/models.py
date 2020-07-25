@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     name= models.CharField(max_length=100,verbose_name="Category Name")
+    contant = models.TextField(verbose_name="Content")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -11,7 +12,7 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural="Categories"
         ordering=["-created_at"]
-    
+
 class Photo(models.Model):
     label=models.CharField(max_length=100,verbose_name="Label")
     photo = models.ImageField()
@@ -23,4 +24,3 @@ class Photo(models.Model):
 
     class Meta:
         ordering=["-created_at"]
-    

@@ -1,3 +1,4 @@
+
 {%if sliders%}
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
@@ -6,7 +7,7 @@
   <ol class="carousel-indicators">
   {%for slider in sliders%}
     <li data-target="#carousel-example-1z" data-slide-to="{{forloop.counter}}" class="{%if forloop.counter is 1|add:"0" %}active{%endif%}"></li>
-    
+
   {%endfor%}
   </ol>
   <!--/.Indicators-->
@@ -17,14 +18,16 @@
     <!--First slide-->
     {%for slider in sliders%}
     <div class="carousel-item {%if forloop.counter is 1|add:"0" %}active{%endif%}">
-      <div class="view" style="background-image: url('../media/{{slider.photo}}'); background-repeat: no-repeat; background-size: cover;">
+
+  <div class="view" style="background-image: url('../media/{{slider.photo}}'); background-repeat: no-repeat; background-size: cover;">
+
 
         <!-- Mask & flexbox options-->
         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
           <!-- Content -->
           <div class="text-center white-text mx-5 wow fadeIn">
-            <h1 class="mb-4">
+            <h1 class="mb-4 my-2">
               <strong>{{slider.header}}</strong>
             </h1>
 
@@ -32,9 +35,9 @@
               <strong>{{slider.content}}</strong>
             </p>
 
-         
 
-           
+
+
           </div>
           <!-- Content -->
 
